@@ -1,6 +1,6 @@
 ﻿function Game(option){
-	var game = option;//переменна¤ с приложением 
-	var coordsEmpty;//координаты пустой ¤чейки
+	var game = option;
+	var coordsEmpty;//координаты пустой ячейки
 //координаты центра пустой ¤чейки
 	var coordsEmptyCenterX;
 	var coordsEmptyCenterY;
@@ -101,32 +101,32 @@
 		switch(numberRadio){
 			case 0:
 				if(mode == "12345678910111213141516"){
-					alert("—ќбрал!");
+					alert("Собрал!");
 				};
 				break;
 			case 1:
 				if(mode == "12348765910111216151413"){
-					alert("—ќбрал!");
+					alert("Собрал!");
 				};
 				break;
 			case 2:
 				if(mode == "15913261014371115481216"){
-					alert("—ќбрал!");
+					alert("Собрал!");
 				};
 				break;
 			case 3:
 				if(mode == "18916271014361114451213"){
-					alert("—ќбрал!");
+					alert("Собрал!");
 				};
 				break;
 			case 4:
 				if(mode == "12341213145111615610987"){
-					alert("—ќбрал!");
+					alert("Собрал!");
 				};
 				break;
 			case 5:
 				if(mode == "11211102131693141584567"){
-					alert("—ќбрал!");
+					alert("СОбрал!");
 				};
 				break;
 		}
