@@ -1,0 +1,129 @@
+#game {border-spacing:10px;
+	   border:10px solid #330000;
+	   border-radius:5px 5px 5px 5px;
+	   background-color:#33FFCC;
+	  }
+	   
+td {width:100px;
+	height:100px;
+	padding:0px;	
+	margin:0px
+	}
+	
+.playing {width:94px;
+	height:94px;
+	background-color:blue;
+	color:white;
+	text-align:center;
+	line-height:100px;
+	font-size:50px;
+	border:3px outset;
+	border-radius:5px;
+	transition:background-color 0.125s linear;
+	}
+	
+.playing:active {border:3px inset;
+				}
+.playing:hover {background-color:#006699;
+				}
+
+.control {background-color:#33FFCC;
+		   }
+		  
+.button {width:156px;
+		height:41px;
+		border: 1px solid #333;
+		border-radius:4px;
+	    background:linear-gradient(to top, black 30%, Gainsboro );
+	    box-shadow:0px 2px 0px gray;
+	    text-align:center;
+	    line-height:35px;
+	    color:white;
+	    font-size:22px;
+		font-family:Helvetica;
+		font-weight:bold;
+	    text-shadow:0px 0px 15px white;
+	    cursor:pointer;
+	   }
+.button.control_mix {position:relative;
+					top:-3px;
+					left:2px;
+					display:inline-block;
+					}
+.button.control_mode  {display:inline-block;
+					   position:relative;
+					   top:-3px;
+					   left:2px;
+					  }
+.button.control_restart {position:relative;
+						 top:3px;
+					     left:2px;
+						 display:inline-block;
+						}
+.button.control_info  {display:inline-block;
+						background:linear-gradient(to top, red 30%, Gainsboro );
+					   position:relative;
+					   top:3px;
+					   left:2px;
+					  }
+.button.control_info:hover {background:linear-gradient(to top,Gainsboro 10%, red );
+							}
+.button.control_info:active {background:linear-gradient(to top,Gainsboro 30%, red );
+							}
+.button:hover {background:linear-gradient(to top, Gainsboro 10%, black );
+			   }
+			
+.button:active {background:linear-gradient(to top, Gainsboro 30%, black);
+				box-shadow:0px 0px 0px ;
+				}
+		  
+.information {width:394px;
+			  height:400px;
+			  background-color:white;
+			  border:3px solid orange;
+			  border-radius:5px;
+			  display:none;
+			  opacity:1;
+			   padding:15px;
+			   position:
+			  }
+.mode         {width:394px;
+			  height:400px;
+			  background-color:white;
+			  border:3px solid orange;
+			  border-radius:5px;
+			  display:none;
+			  opacity:1;
+			  padding:15px
+			  }
+
+.hideInfo {position:relative;
+			left:365px;
+			width:20px;
+			height:20px;
+			color:red;
+			font-size:25px;
+			cursor:pointer;
+			}
+
+span {font-family:Helvetica;
+	  background:linear-gradient(to top, black 30%, Gainsboro );
+	  font-size:15px;
+	  color:white;
+	  display:inline-block;
+	  }	
+input {cursor:pointer}
+img {position:relative;
+	 top:23px;
+	 box-shadow:2px 2px 4px black;
+	 cursor:pointer
+	 }
+img:hover {border:2px solid red;
+		   width:56px;
+		   height:56px;
+		   }
+img:active {border:2px solid red;
+		   box-shadow:0 0 0;
+		   position:relative;
+		   top:27px;
+		   }

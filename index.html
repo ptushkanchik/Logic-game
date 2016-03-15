@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<script src="jquery-1.2.6.js"></script>
+</head>
+
+<body >
+
+<div class="information">
+	<div class="hideInfo" onclick="game.hideInfo()">&#10006;</div>
+	<br>
+	Приложение представляет собой логическую игру, в которой задача игрока - расположить фишки с цифрами в определеннном порядке. Для начала игры нажмите <span>&nbspПорядок&nbsp </span> &nbsp и в меню выберите определенный вариант расположения фишек. После этого нажмите &nbsp <span>&nbspПеремешать&nbsp </span> &nbsp и подождите пока программа перемешает фишки. Далее передвигайте фишки, стремясь выстроить их согласно выбранного варианта. Кнопка &nbsp <span>&nbspЗаново&nbsp </span> &nbsp выстраивает фишки по порядку, выбранному игроком. Для сброса текущей игры нажмите на нее, затем при желании выберите новый порядок расстановки фишек, нажмите на &nbsp <span>&nbspПеремешать&nbsp </span> &nbsp и играйте новую игру.
+</div>
+
+<div class="mode">
+	<div class="hideInfo" onclick="game.hideMode()">&#10006;</div>
+	<br>
+	Выберите один из вариантов порядка расстановки фишек:<br>
+	&nbsp &nbsp &nbsp &nbsp &nbsp <label><input type="radio" name="mode" checked>&nbsp &nbsp <img src="1.png"></label>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+	<label><input type="radio" name="mode">&nbsp &nbsp <img src="2.png"></label><br><br><br>
+	&nbsp &nbsp &nbsp &nbsp &nbsp <label><input type="radio" name="mode">&nbsp &nbsp <img src="5.png"></label>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+	<label><input type="radio" name="mode">&nbsp &nbsp <img src="6.png"></label><br><br><br>
+	&nbsp &nbsp &nbsp &nbsp &nbsp <label><input type="radio" name="mode">&nbsp &nbsp <img src="3.png"></label>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+	<label><input type="radio" name="mode">&nbsp &nbsp <img src="4.png"></label>
+</div>
+
+<table id="game">
+
+	<tbody>
+		<tr>
+			<td><div class="playing">1</div></td>
+			<td><div class="playing">2</div></td>
+			<td><div class="playing">3</div></td>
+			<td><div class="playing">4</div></td>
+		</tr>
+		<tr>
+			<td><div class="playing">5</div></td>
+			<td><div class="playing">6</div></td>
+			<td><div class="playing">7</div></td>
+			<td><div class="playing">8</div></td>
+		</tr>
+		<tr>
+			<td><div class="playing">9</div></td>
+			<td><div class="playing">10</div></td>
+			<td><div class="playing">11</div></td>
+			<td><div class="playing">12</div></td>
+		</tr>
+		<tr>
+			<td><div class="playing">13</div></td>
+			<td><div class="playing">14</div></td>
+			<td><div class="playing">15</div></td>
+			<td><div class="playing">16</div></td>
+		</tr>
+		<tr>
+			<td class="control" colspan="3">
+				<button class="button control_mix" onclick="game.mix()">Перемешать</button>
+				<button class="button control_mode" onclick="game.showMode()">Порядок</button>
+				<br>
+				<button class="button control_info" onclick="game.showInfo()">О игре</button>
+				<button class="button control_restart" onclick="game.restart()">Заново</button>
+				
+			</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table> 
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
