@@ -83,19 +83,16 @@ td {width:100px;
 			  border:3px solid orange;
 			  border-radius:5px;
 			  display:none;
-			  opacity:1;
-			   padding:15px;
-			   position:
+			  padding:15px;
 			  }
 .mode         {width:394px;
-			  height:400px;
-			  background-color:white;
-			  border:3px solid orange;
-			  border-radius:5px;
-			  display:none;
-			  opacity:1;
-			  padding:15px
-			  }
+		   height:400px;
+		   background-color:white;
+		   border:3px solid orange;
+		   border-radius:5px;
+		   display:none;
+		   padding:15px
+	      }
 
 .hideInfo {position:relative;
 			left:365px;
@@ -113,17 +110,18 @@ span {font-family:Helvetica;
 	  display:inline-block;
 	  }	
 input {cursor:pointer}
-img {position:relative;
-	 top:23px;
-	 box-shadow:2px 2px 4px black;
-	 cursor:pointer
+.variant {position:relative;
+	     top:23px;
+	     box-shadow:2px 2px 4px black;
+	     cursor:pointer
 	 }
-img:hover {border:2px solid red;
+.variant:hover {border:2px solid red;
 		   width:56px;
 		   height:56px;
 		   }
-img:active {border:2px solid red;
+.variant:active {border:2px solid red;
 		   box-shadow:0 0 0;
 		   position:relative;
 		   top:27px;
 		   }
+.win {display:none}
