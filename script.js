@@ -55,9 +55,13 @@
 			$(target).css({position:"absolute",
 							top:coordsTarget.top + "px",
 							left:coordsTarget.left + "px"}).animate({top:coordsEmpty.top + "px",
-																	left:coordsEmpty.left + "px"},time);
+																	left:coordsEmpty.left + "px"},time).appendTo($(empty));
+			setTimeout(function(){
+				$(target).css("position","");
+			},time);
 			
 			$(empty).append(target).removeClass("empty");
+			
 		}
 		$(".around").removeClass("around");
 	}
@@ -101,32 +105,32 @@
 		switch(numberRadio){
 			case 0:
 				if(mode == "12345678910111213141516"){
-					alert("Собрал!");
+					showWin();
 				};
 				break;
 			case 1:
 				if(mode == "12348765910111216151413"){
-					alert("Собрал!");
+					showWin();
 				};
 				break;
 			case 2:
 				if(mode == "15913261014371115481216"){
-					alert("Собрал!");
+					showWin();
 				};
 				break;
 			case 3:
 				if(mode == "18916271014361114451213"){
-					alert("Собрал!");
+					showWin();
 				};
 				break;
 			case 4:
 				if(mode == "12341213145111615610987"){
-					alert("Собрал!");
+					showWin();
 				};
 				break;
 			case 5:
 				if(mode == "11211102131693141584567"){
-					alert("СОбрал!");
+					showWin();
 				};
 				break;
 		}
@@ -151,6 +155,9 @@
 	}
 			
 	this.restart = function(){
+	//если есть картинка "Собрано!" - удалить ее и разблокировать кнопки "Перемешать","Об игре","Порядок"
+		$(".win").css("display","none");
+		$(".control_mix, .control_mode, .control_info").removeAttr("disabled");
 	//удалим все div с классом playing
 	//d играющие ¤чейки таблицы заново поместим блоки div с классом playing
 	//найдем пор¤дковый номер радиокнопки со свойством checked в коллекции
@@ -201,14 +208,14 @@
 		$(".information").css({position:"absolute",
 							   top:coordsGame.top + 20 + "px",
 							   left:coordsGame.left + 20 + "px",
-							   display:"block",
-							   zIndex:"1000"});
+							   display:"block"
+							   });
 		
 	}
 	
 	this.hideInfo = function(){
-		$(".button").removeAttr("disabled", true);
-		$(".information").css("zIndex","-3");
+		$(".button").removeAttr("disabled");
+		$(".information").css("display","");
 	}
 	
 	this.showMode = function(){
@@ -217,13 +224,23 @@
 		$(".mode").css({position:"absolute",
 							   top:coordsGame.top + 20 + "px",
 							   left:coordsGame.left + 20 + "px",
-							   display:"block",
-							   zIndex:"1000"});
+							   display:"block"
+							   });
 		}
 	
 	this.hideMode = function(){
-		$(".button").removeAttr("disabled", true);
-		$(".mode").css("zIndex","-5");
+		$(".button").removeAttr("disabled");
+		$(".mode").css("display","");
+	}
+	
+	function showWin(){
+		$(".control_mix, .control_mode, .control_info").attr("disabled", true);
+		var coordsGame = game.getBoundingClientRect();
+		$(".win").css({position:"absolute",
+					   top:coordsGame.top + 35 + "px",
+					   left:coordsGame.left - 70 + "px",
+					   display:"block"
+					});
 	}
 	
 	game.onclick = function(event){
