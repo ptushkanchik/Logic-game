@@ -119,7 +119,7 @@
 				};
 				break;
 			case 3:
-				if(mode == "18916271014361114451213"){
+				if(mode == "18916271015361114451213"){
 					showWin();
 				};
 				break;
@@ -135,6 +135,16 @@
 				break;
 		}
 		
+	}
+
+	function showWin(){
+		$(".control_mix, .control_mode, .control_info").attr("disabled", true);
+		var coordsGame = game.getBoundingClientRect();
+		$(".win").css({position:"absolute",
+			top:coordsGame.top + 35 + "px",
+			left:coordsGame.left - 70 + "px",
+			display:"block"
+		});
 	}
 	
 	this.onmousedown = function(){
@@ -233,15 +243,7 @@
 		$(".mode").css("display","");
 	}
 	
-	function showWin(){
-		$(".control_mix, .control_mode, .control_info").attr("disabled", true);
-		var coordsGame = game.getBoundingClientRect();
-		$(".win").css({position:"absolute",
-					   top:coordsGame.top + 35 + "px",
-					   left:coordsGame.left - 70 + "px",
-					   display:"block"
-					});
-	}
+
 	
 	game.onclick = function(event){
 		if(event.target.classList.contains("playing")){
